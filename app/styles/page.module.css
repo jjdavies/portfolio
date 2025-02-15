@@ -1,5 +1,137 @@
-.main {
-  background: black;
+.page{
+  background:#1F2533;
+  min-height:100vh;
+}
+
+.profilehead, .pagehead{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height:30vh;
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 10px ;
+}
+
+@media (min-width: 900px) {
+  .pagehead{
+    flex-direction: row;
+  }
+}
+
+
+.profiletext{
+  text-align:center;
+  width:75%;
+}
+
+.profilename{
+  
+  font-size: clamp(20px, 5vw, 50px);
+  color:yellow;
+}
+
+.profiledesc{
+  font-size:clamp(15px, 3vw, 35px);
+  color:white;
+}
+
+.profilephotocontainer{
+  height:100%;
+  /* width:auto; */
+  text-align: center;
+}
+
+.profilephoto{
+  height:100%;
+  width:auto;
+  /* position:absolute; */
+  /* top:0; */
+  /* right:0; */
+}
+
+.section{
+  margin:4vw 2vw;
+}
+
+.sectionheader{
+  font-size:clamp(15px, 3vw, 35px);
+  color:white;
+  margin:0 2vw;
+}
+
+.sectiontext{
+  font-size:clamp(12px, 2vw, 30px);
+  color:white;
+  margin:0 1vw;
+}
+
+.techbadges{
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  padding:0 5vw;
+  justify-content: space-between;
+}
+
+.skillbadgecontainer{
+  display:flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.techbadge{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  width:20vw;
+  min-height:20vw;
+  margin:1vw;
+  padding:1vw;
+  background:#4D4D4D;
+  font-size: 10px;
+  color:white;
+}
+
+.skillname{
+  text-align: center;
+  font-size:clamp(10px, 2vw, 20px);
+}
+
+.portfoliocontainer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding:0 3vw;
+}
+
+.portfolioitem{
+  position:relative;
+  width:45%;
+}
+
+.portfolioimg{
+  width:100%;
+  height:auto;
+  filter:brightness(70%)
+}
+
+.portfoliotext{
+  position:absolute;
+  width:100%;
+  text-align: center;
+  top:30%;
+  font-size:clamp(12px, 3vw, 40px);
+  color:white;
+}
+
+.contactcontainer{
+  height:10vh;
 }
 
 .banner {
@@ -14,4 +146,33 @@
   background: yellow;
   color: black;
   font-size: 20px;
+}
+
+.imagesections{
+  display:flex;
+  flex-direction:column
+}
+
+@media (min-width: 900px) {
+  .imagesections{
+    flex-direction:row;
+  }
+}
+
+.imagesection{
+  display:flex;
+  flex-direction: column;
+  margin:1vw;
+}
+
+.videosection{
+  display:flex;
+  flex-direction: column;
+  margin:4vw 2vw;
+}
+
+@media (min-width:900px){
+  .videosection{
+    flex-direction: row;
+  }
 }
