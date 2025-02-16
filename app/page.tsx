@@ -81,16 +81,19 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className={erasDemi.className + " " + styles.sectionheader}>
-          About
-        </div>
-        <div className={erasDemi.className + " " + styles.sectiontext}>
-          I have developed expertise in the development of products from
-          whiteboard to production that covers multimedia design, APP and web
-          development, media production, as well as training and leading a large
-          team. My particular expertise is in launching ambitious projects that
-          comprise multiple media formats in an efficient process that results
-          in a meticulous, fully-realised product for the end user. See my work!
+        <div className={styles.section}>
+          <div className={erasDemi.className + " " + styles.sectionheader}>
+            About
+          </div>
+          <div className={erasDemi.className + " " + styles.sectiontext}>
+            I have developed expertise in the development of products from
+            whiteboard to production that covers multimedia design, APP and web
+            development, media production, as well as training and leading a
+            large team. My particular expertise is in launching ambitious
+            projects that comprise multiple media formats in an efficient
+            process that results in a meticulous, fully-realised product for the
+            end user. See my work!
+          </div>
         </div>
         <div
           className={erasDemi.className + " " + styles.sectionheader}
@@ -135,59 +138,63 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div
-          className={erasDemi.className + " " + styles.sectionheader}
-          style={{ textAlign: "center" }}
-        >
-          Portfolio
-        </div>
-        <div className={styles.portfoliocontainer}>
-          <div className={erasDemi.className + " " + styles.portfolioitem}>
-            <Link href="/portfolio/animated-scenes">
+        <div className={styles.section}>
+          <div
+            className={erasDemi.className + " " + styles.sectionheader}
+            style={{ textAlign: "center" }}
+          >
+            Portfolio
+          </div>
+          <div className={styles.portfoliocontainer}>
+            <div className={erasDemi.className + " " + styles.portfolioitem}>
+              <Link href="/portfolio/animated-scenes">
+                <Image
+                  className={styles.portfolioimg}
+                  src={AnimatedScenesThumb}
+                  width={0}
+                  height={0}
+                  alt="animated scenes thumb"
+                />
+                <div className={styles.portfoliotext}>Animated Scenes</div>
+              </Link>
+            </div>
+            <div className={erasDemi.className + " " + styles.portfolioitem}>
+              <Link href="/portfolio/interactive-activities">
+                <Image
+                  className={styles.portfolioimg}
+                  src={InteractiveActivitiesThumb}
+                  width={0}
+                  height={0}
+                  alt="interactive activities"
+                />
+                <div className={styles.portfoliotext}>
+                  Interactive Activities
+                </div>
+              </Link>
+            </div>
+            <div className={erasDemi.className + " " + styles.portfolioitem}>
+              <Link href="/portfolio/sight-word-stories">
+                <Image
+                  className={styles.portfolioimg}
+                  src={SightWordStoriesThumb}
+                  width={0}
+                  height={0}
+                  alt="sight word stories"
+                />
+                <div className={styles.portfoliotext}>Sight Word Stories</div>
+              </Link>
+            </div>
+            <div className={erasDemi.className + " " + styles.portfolioitem}>
               <Image
                 className={styles.portfolioimg}
-                src={AnimatedScenesThumb}
+                src={VideoMkt}
                 width={0}
                 height={0}
-                alt="animated scenes thumb"
+                alt="video marketing"
               />
-              <div className={styles.portfoliotext}>Animated Scenes</div>
-            </Link>
-          </div>
-          <div className={erasDemi.className + " " + styles.portfolioitem}>
-            <Link href="/portfolio/interactive-activities">
-              <Image
-                className={styles.portfolioimg}
-                src={InteractiveActivitiesThumb}
-                width={0}
-                height={0}
-                alt="interactive activities"
-              />
-              <div className={styles.portfoliotext}>Interactive Activities</div>
-            </Link>
-          </div>
-          <div className={erasDemi.className + " " + styles.portfolioitem}>
-            <Link href="/portfolio/sight-word-stories">
-              <Image
-                className={styles.portfolioimg}
-                src={SightWordStoriesThumb}
-                width={0}
-                height={0}
-                alt="sight word stories"
-              />
-              <div className={styles.portfoliotext}>Sight Word Stories</div>
-            </Link>
-          </div>
-          <div className={erasDemi.className + " " + styles.portfolioitem}>
-            <Image
-              className={styles.portfolioimg}
-              src={VideoMkt}
-              width={0}
-              height={0}
-              alt="video marketing"
-            />
-            <div className={styles.portfoliotext}>
-              Videos for English Books and Classes
+              <div className={styles.portfoliotext}>
+                Videos for English Books and Classes
+              </div>
             </div>
           </div>
         </div>

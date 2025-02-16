@@ -6,7 +6,17 @@ import YouTube from "react-youtube";
 export default function Page() {
   return (
     <div className={styles.page}>
-      <div className={styles.sectionheader}>Sight Word Stories</div>
+      <div className={styles.pagehead}>
+        <div className={styles.section}>
+          <div className={styles.sectionheader}>Sight Word Stories</div>
+          <div className={styles.sectiontext}>
+            A series of videos to accompany books that teach sight words. These
+            are high-quality videos produced in a studio with a professional
+            teacher.
+            <br /> Produced and Edited by James Davies.
+          </div>
+        </div>
+      </div>
       <div className={styles.videosection}>
         <div className={styles.section}>
           <YouTube
@@ -21,7 +31,7 @@ export default function Page() {
           />
           <div className={styles.sectiontext}>
             This series of eight videos accompany fiction books for young
-            leaders, each of which introduces sight words.
+            learners, each of which introduces sight words.
           </div>
         </div>
         <div className={styles.section}>
