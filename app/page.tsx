@@ -1,6 +1,6 @@
+import React from "react";
 import Image from "next/image";
 import styles from "./styles/page.module.css";
-import model from "./img/model.png";
 import localFont from "next/font/local";
 import ProfilePhoto from "./img/_DSC0033.png";
 import Adobe from "./img/skills/adobe.svg";
@@ -100,7 +100,7 @@ export default function Home() {
         </div>
         <div className={styles.techbadges}>
           {skillsTechs.map((skill) => (
-            <div className={styles.techbadge}>
+            <div key={skill.name} className={styles.techbadge}>
               <div className={styles.skillbadgecontainer}>
                 <Image
                   src={skill.img}

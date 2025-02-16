@@ -1,7 +1,6 @@
 "use client";
+import React from "react";
 import styles from "../../styles/page.module.css";
-import portfolioStyles from "../../styles/portfolio.module.css";
-import BF3School from "../../component/scenes/BF3U1School1";
 import YouTube from "react-youtube";
 
 export default function Page() {

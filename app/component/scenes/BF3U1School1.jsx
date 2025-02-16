@@ -4,7 +4,6 @@ import { SpinePlayer } from '@esotericsoftware/spine-player';
 import sceneStyles from '../../styles/Scene.module.css';
 import useSound from 'use-sound';
 import Link from 'next/link';
-import Image from 'next/image';
 // import NavArrow from '../../img/buttons/navArrow.svg';
 
 // import schoolAmbience from '../sounds/schoolambience.mp3';
@@ -34,17 +33,17 @@ const init = () => {
 
     success: (player) => {
       var animationState = player.animationState;
-      var pianofingering = animationState.setAnimation(
+      animationState.setAnimation(
         1,
         'pianofingering',
         true
       );
-      var pianoheadturn = animationState.setAnimation(
+      animationState.setAnimation(
         2,
         'pianoheadturn',
         true
       );
-      var pianolean = animationState.setAnimation(
+      animationState.setAnimation(
         3,
         'pianolean',
         true
@@ -55,33 +54,33 @@ const init = () => {
         true
       );
       mtkidsdance.timeScale = 0.7;
-      var etteacher = animationState.setAnimation(
+      animationState.setAnimation(
         5,
         'etgesturing',
         true
       );
-      var etkid2 = animationState.setAnimation(
+      animationState.setAnimation(
         6,
         'etkid2nodding',
         true
       );
-      var etkid4 = animationState.setAnimation(
+      animationState.setAnimation(
         7,
         'etkid4nodding',
         true
       );
-      var bus = animationState.setAnimation(8, 'bus', true);
-      var principaltype1 = animationState?.setAnimation(
+      animationState.setAnimation(8, 'bus', true);
+      animationState?.setAnimation(
         9,
         'principaltyping1',
         true
       );
-      var principaltype2 = animationState?.setAnimation(
+      animationState?.setAnimation(
         10,
         'principaltyping2',
         true
       );
-      var secretary = animationState?.setAnimation(
+      animationState?.setAnimation(
         11,
         'secretary',
         true
@@ -92,17 +91,17 @@ const init = () => {
         true
       );
       kidsplaying.timeScale = 0.5;
-      var gatekeeper = animationState.setAnimation(
+      animationState.setAnimation(
         13,
         'gatekeeper',
         true
       );
-      var gymteacher = animationState?.setAnimation(
+      animationState?.setAnimation(
         14,
         'gymteacher',
         true
       );
-      var janitor = animationState?.setAnimation(15, 'janitor', true);
+      animationState?.setAnimation(15, 'janitor', true);
 
       //initial sound
       // schoolSound();
@@ -115,7 +114,7 @@ const init = () => {
       console.log(zoomstatus);
       if (sceneContainer === null) return;
       if (zoomstatus === 'music') {
-        var zoomMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoommusicclassroom',
           false
@@ -123,7 +122,7 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'english') {
-        var zoomMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomenglishclassroom',
           false
@@ -131,12 +130,12 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'office') {
-        var zoomMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomoffice',
           false
         );
-        var fadeOutBus = animationState?.setAnimation(
+        animationState?.setAnimation(
           26,
           'fadeoutbus',
           false
@@ -144,12 +143,12 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'gym') {
-        var zoomMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomgym',
           false
         );
-        var fadeOutBus = animationState?.setAnimation(
+        animationState?.setAnimation(
           26,
           'fadeoutbus',
           false
@@ -157,12 +156,12 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'gate') {
-        var zoomMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomgate',
           false
         );
-        var fadeOutBus = animationState?.setAnimation(
+        animationState?.setAnimation(
           26,
           'fadeoutbus',
           false
@@ -170,7 +169,7 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'outfrommusic') {
-        var zoomOutMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomoutfrommusic',
           false
@@ -178,7 +177,7 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'outfromenglish') {
-        var zoomOutMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomoutfromenglish',
           false
@@ -186,12 +185,12 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'outfromoffice') {
-        var zoomOutMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomoutfromoffice',
           false
         );
-        var fadeInBus = animationState?.setAnimation(
+        animationState?.setAnimation(
           26,
           'fadeinbus',
           false
@@ -199,12 +198,12 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'outfromgym') {
-        var zoomOutMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomoutfromgym',
           false
         );
-        var fadeInBus = animationState?.setAnimation(
+        animationState?.setAnimation(
           26,
           'fadeinbus',
           false
@@ -212,12 +211,12 @@ const init = () => {
         sceneContainer.dataset.zoomstatus = 'null';
       }
       if (zoomstatus === 'outfromgate') {
-        var zoomOutMusic = animationState.setAnimation(
+        animationState.setAnimation(
           25,
           'zoomoutfromgate',
           false
         );
-        var fadeInBus = animationState?.setAnimation(
+        animationState?.setAnimation(
           26,
           'fadeinbus',
           false
@@ -376,13 +375,13 @@ const BF3School = React.memo(() => {
       return setZoomStatus('outfromgate');
     }
   };
-  const stopAllSounds = () => {
-    schoolsound.sound.stop();
-    classroomsound.sound.stop();
-    playgroundsound.sound.stop();
-    pianosound.sound.stop();
-    officesound.sound.stop();
-  };
+  // const stopAllSounds = () => {
+  //   schoolsound.sound.stop();
+  //   classroomsound.sound.stop();
+  //   playgroundsound.sound.stop();
+  //   pianosound.sound.stop();
+  //   officesound.sound.stop();
+  // };
   return (
     <div
       id={'sceneContainer'}

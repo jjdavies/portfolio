@@ -1,6 +1,6 @@
 "use client";
+import React from "react";
 import styles from "../../styles/page.module.css";
-import portfolioStyles from "../../styles/portfolio.module.css";
 import Builder from "../../img/media/builder.gif";
 import Player from "../../img/media/farmactivity.gif";
 import InteractiveActivities from "../../img/Interactive Activities 3.png";
