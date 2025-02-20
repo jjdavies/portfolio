@@ -1,6 +1,20 @@
+
 .page{
-  background:#1F2533;
+  background:rgba(31, 37, 51, 0.8);
   min-height:100vh;
+  text-align: center;
+}
+
+.main{
+  background:rgb(31, 37, 51);
+}
+
+@media screen and (min-width: 900px) {
+  .main{
+    margin:auto;
+    width:70%;
+  }
+  
 }
 
 .profilehead, .pagehead{
@@ -9,18 +23,16 @@
   align-items: center;
   justify-content: space-between;
   height:30vh;
-  background: rgba(0,0,0,0.2);
+  background: rgba(31, 37, 51, 0.8);
   box-shadow: 0px 10px 10px ;
+  width:100%;
 }
 
-@media (min-width: 900px) {
-  .pagehead{
-    flex-direction: row;
-  }
-}
+
 
 
 .profiletext{
+  font-family: Myriad Pro;
   text-align:center;
   width:75%;
 }
@@ -54,18 +66,26 @@
   margin:4vw 2vw;
 }
 
+@media (min-width: 900px) {
+  .section{
+    width:80%;
+    margin:4vw 5vw;
+  }
+  
+}
+
 .sectionheader{
   font-size:clamp(15px, 3vw, 25px);
   color:white;
-  margin:0 2vw;
+  margin:1vw 2vw;
 }
 
 .sectiontext{
-  margin:0 3vw;
+  margin:7vw 3vw;
   padding: 0 5vw;
   font-size:clamp(12px, 2vw, 15px);
   color:white;
-  margin:0 1vw;
+  /* margin:0 1vw; */
 }
 
 .techbadges{
@@ -95,9 +115,17 @@
   min-height:20vw;
   margin:1vw;
   padding:1vw;
-  background:#4D4D4D;
+  background:rgba(77,77,77,0.3);
   font-size: 10px;
   color:white;
+}
+
+@media (min-width: 900px) {
+  .techbadge{
+    width:12vw;
+    min-height:12vw;
+    font-size: 12px;
+  }
 }
 
 .skillname{
@@ -168,14 +196,20 @@
   margin:1vw;
 }
 
-.videosection{
+.videosections{
   display:flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  margin:4vw 2vw;
+  /* margin:4vw 2vw; */
+  width:100vw;
 }
 
 @media (min-width:900px){
   .videosection{
     flex-direction: row;
   }
+}
+
+.videosection{
+  margin:0;
 }

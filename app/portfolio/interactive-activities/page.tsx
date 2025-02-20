@@ -38,9 +38,7 @@ export default function Page() {
       </div>
       <div className={styles.imagesections}>
         <div className={styles.imagesection}>
-          <div className={styles.sectionheader} style={{ margin: "1vh" }}>
-            Activity Builder
-          </div>
+          <div className={styles.sectionheader}>Activity Builder</div>
           <Image
             src={Builder}
             width={0}

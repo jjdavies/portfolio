@@ -21,6 +21,7 @@ import SightWordStoriesThumb from "./img/swstories.png";
 import Link from "next/link";
 
 const erasDemi = localFont({ src: "./eras-itc-demi.ttf" });
+const myriadPro = localFont({ src: "./MyriadPro-Regular.otf" });
 
 const skillsTechs = [
   {
@@ -61,38 +62,40 @@ const skillsTechs = [
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <div className={styles.profilehead}>
-          <div className={styles.profiletext}>
-            <div className={erasDemi.className + " " + styles.profilename}>
-              James Davies
-            </div>
-            <div className={erasDemi.className + " " + styles.profiledesc}>
-              Full Stack Developer & Media Specialist
-            </div>
+      <div className={styles.profilehead}>
+        <div className={styles.profiletext}>
+          <div className={erasDemi.className + " " + styles.profilename}>
+            James Davies
           </div>
-          <div className={styles.profilephotocontainer}>
-            <Image
-              className={styles.profilephoto}
-              src={ProfilePhoto}
-              width={0}
-              height={0}
-              alt={"James Profile Photo"}
-            />
+          <div className={erasDemi.className + " " + styles.profiledesc}>
+            Full Stack Developer & Media Specialist
           </div>
         </div>
+        <div className={styles.profilephotocontainer}>
+          <Image
+            className={styles.profilephoto}
+            src={ProfilePhoto}
+            width={0}
+            height={0}
+            alt={"James Profile Photo"}
+          />
+        </div>
+      </div>
+      <main className={styles.main}>
+        <div className={styles.profilehead} style={{ height: "2px" }}></div>
         <div className={styles.section}>
           <div className={erasDemi.className + " " + styles.sectionheader}>
             About
           </div>
-          <div className={erasDemi.className + " " + styles.sectiontext}>
+          <div className={myriadPro.className + " " + styles.sectiontext}>
             I have developed expertise in the development of products from
             whiteboard to production that covers multimedia design, APP and web
             development, media production, as well as training and leading a
-            large team. My particular expertise is in launching ambitious
-            projects that comprise multiple media formats in an efficient
-            process that results in a meticulous, fully-realised product for the
-            end user. See my work!
+            large team.
+            <br /> My particular expertise is in launching ambitious projects
+            that comprise multiple media formats in an efficient process that
+            results in a meticulous, fully-realised product for the end user.
+            See my work!
           </div>
         </div>
         <div
