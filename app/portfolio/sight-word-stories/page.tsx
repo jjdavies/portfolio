@@ -4,13 +4,13 @@ import styles from "../../styles/page.module.css";
 import YouTube from "react-youtube";
 
 export default function Page() {
-  const [width, setWidth] = useState<number>("1236");
-  const [height, setHeight] = useState<number>("695.25");
+  const [width, setWidth] = useState<string>("1236");
+  const [height, setHeight] = useState<string>("695.25");
 
   useEffect(() => {
     console.log(window.innerWidth, window.innerWidth * 0.5625);
-    setWidth(window.innerWidth * 0.9);
-    setHeight(window.innerWidth * 0.9 * 0.5625);
+    setWidth("" + window.innerWidth * 0.9);
+    setHeight("" + window.innerWidth * 0.9 * 0.5625);
   }, []);
   const opts = {
     width: width,
@@ -34,7 +34,7 @@ export default function Page() {
       </div>
       <div className={styles.videosections}>
         <div className={styles.section} style={{ margin: 0 }}>
-          {width > 0 && height > 0 && (
+          {+width > 0 && +height > 0 && (
             <YouTube videoId="kaU6UtuYzG4" opts={opts} />
           )}
           <div className={styles.sectiontext}>
@@ -43,7 +43,7 @@ export default function Page() {
           </div>
         </div>
         <div className={styles.section} style={{ margin: 0 }}>
-          {width > 0 && height > 0 && (
+          {+width > 0 && +height > 0 && (
             <YouTube videoId="C7DUL9uhF-4" opts={opts} />
           )}
           <div className={styles.sectiontext}>
