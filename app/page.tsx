@@ -21,7 +21,7 @@ import SightWordStoriesThumb from "./img/swstories.png";
 import Link from "next/link";
 
 const erasDemi = localFont({ src: "./eras-itc-demi.ttf" });
-const myriadPro = localFont({ src: "./MyriadPro-Regular.otf" });
+const myriadPro = localFont({ src: "./MYRIADPRO-REGULAR.otf" });
 
 const skillsTechs = [
   {
