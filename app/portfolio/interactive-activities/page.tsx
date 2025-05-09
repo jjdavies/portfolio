@@ -1,9 +1,15 @@
 "use client";
 import React from "react";
+
+import localFont from "next/font/local";
 import styles from "../../styles/page.module.css";
 import Builder from "../../img/media/builder.gif";
 import Player from "../../img/media/farmactivity.gif";
 import InteractiveActivities from "../../img/Interactive Activities 3.png";
+import Link from "next/link";
+import GithubLogo from "../../img/GitHub_Invertocat_Light.png";
+
+const monaSansSemi = localFont({ src: "../../MonaSans-SemiBold.ttf" });
 
 import Image from "next/image";
 
@@ -22,6 +28,20 @@ export default function Page() {
           <div className={styles.sectionheader} style={{ padding: "0vw" }}>
             Interactive Activities Software
           </div>
+          <Link href="http://www.github.com/jjdavies/octp-res-app">
+            <div className={monaSansSemi.className + " " + styles.github}>
+              <Image
+                src={GithubLogo}
+                style={{
+                  margin: "5px",
+                  width: "30px",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+                alt="github logo"
+              />
+            </div>
+          </Link>
           <div className={styles.sectiontext} style={{ padding: "2vw" }}>
             Tools to develop and present interactive activities for students.
             This software is designed to be used on interactive whiteboards and

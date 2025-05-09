@@ -17,11 +17,14 @@ import InteractiveActivitiesThumb from "./img/Interactive Activities 3.png";
 import AnimatedScenesThumb from "./img/animated scene school.png";
 import VideoMkt from "./img/videomkt.png";
 import SightWordStoriesThumb from "./img/swstories.png";
+import Ecommerce from "./img/ecommerce.jpg";
+import GithubLogo from "./img/GitHub_Invertocat_Light.png";
 
 import Link from "next/link";
 
 const erasDemi = localFont({ src: "./eras-itc-demi.ttf" });
 const myriadPro = localFont({ src: "./MYRIADPRO-REGULAR.otf" });
+const monaSansSemi = localFont({ src: "./MonaSans-SemiBold.ttf" });
 
 const skillsTechs = [
   {
@@ -62,7 +65,7 @@ const skillsTechs = [
 export default function Home() {
   return (
     <div className={styles.page}>
-      <div className={styles.profilehead}>
+      <div className={styles.profilehead} style={{ height: "30vh" }}>
         <div className={styles.profiletext}>
           <div className={erasDemi.className + " " + styles.profilename}>
             James Davies
@@ -70,6 +73,21 @@ export default function Home() {
           <div className={erasDemi.className + " " + styles.profiledesc}>
             Full Stack Developer & Media Specialist
           </div>
+          <Link href="http://www.github.com/jjdavies/">
+            <div className={monaSansSemi.className + " " + styles.github}>
+              <Image
+                src={GithubLogo}
+                style={{
+                  margin: "5px",
+                  width: "30px",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+                alt="github logo"
+              />
+              /jjdavies
+            </div>
+          </Link>
         </div>
         <div className={styles.profilephotocontainer}>
           <Image
@@ -89,7 +107,7 @@ export default function Home() {
           </div>
           <div className={myriadPro.className + " " + styles.sectiontext}>
             I have developed expertise in the development of products from
-            whiteboard to production that covers multimedia design, APP and web
+            education to media that covers multimedia design, APP and web
             development, media production, as well as training and leading a
             large team.
             <br /> My particular expertise is in launching ambitious projects
@@ -154,8 +172,11 @@ export default function Home() {
                 <Image
                   className={styles.portfolioimg}
                   src={AnimatedScenesThumb}
-                  width={0}
-                  height={0}
+                  style={{
+                    width: "200px",
+                    height: "140px",
+                    objectFit: "cover",
+                  }}
                   alt="animated scenes thumb"
                 />
                 <div className={styles.portfoliotext}>Animated Scenes</div>
@@ -166,8 +187,11 @@ export default function Home() {
                 <Image
                   className={styles.portfolioimg}
                   src={InteractiveActivitiesThumb}
-                  width={0}
-                  height={0}
+                  style={{
+                    width: "200px",
+                    height: "140px",
+                    objectFit: "cover",
+                  }}
                   alt="interactive activities"
                 />
                 <div className={styles.portfoliotext}>
@@ -180,8 +204,11 @@ export default function Home() {
                 <Image
                   className={styles.portfolioimg}
                   src={SightWordStoriesThumb}
-                  width={0}
-                  height={0}
+                  style={{
+                    width: "200px",
+                    height: "140px",
+                    objectFit: "cover",
+                  }}
                   alt="sight word stories"
                 />
                 <div className={styles.portfoliotext}>Sight Word Stories</div>
@@ -191,13 +218,33 @@ export default function Home() {
               <Image
                 className={styles.portfolioimg}
                 src={VideoMkt}
-                width={0}
-                height={0}
+                style={{
+                  width: "200px",
+                  height: "140px",
+                  objectFit: "cover",
+                }}
                 alt="video marketing"
               />
               <div className={styles.portfoliotext}>
                 Videos for English Books and Classes
               </div>
+            </div>
+            <div className={erasDemi.className + " " + styles.portfolioitem}>
+              <Link href="/portfolio/ecodrill">
+                <Image
+                  className={styles.portfolioimg}
+                  src={Ecommerce}
+                  style={{
+                    width: "200px",
+                    height: "140px",
+                    objectFit: "cover",
+                  }}
+                  alt="e-commerce website"
+                />
+                <div className={styles.portfoliotext}>
+                  Power Tools - E-commerce Website
+                </div>
+              </Link>
             </div>
           </div>
         </div>

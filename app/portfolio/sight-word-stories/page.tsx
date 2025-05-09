@@ -39,7 +39,7 @@ export default function Page() {
           )}
           <div className={styles.sectiontext}>
             This series of eight videos accompany fiction books for young
-            learners, each of which introduces sight words. {width} {height}
+            learners, each of which introduces sight words.
           </div>
         </div>
         <div className={styles.section} style={{ margin: 0 }}>
