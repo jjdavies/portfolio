@@ -2,7 +2,12 @@
 import React, { useState } from "react";
 import styles from "../styles/page.module.css";
 
-const SymbolRow = (props: any) => {
+interface SymbolRowProps {
+  k: string | number;
+  v: string | number;
+}
+
+const SymbolRow = (props: SymbolRowProps) => {
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <div
